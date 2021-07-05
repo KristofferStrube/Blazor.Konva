@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <Title>Blazor Konva wrapper</Title>
+    <Description>Konva.js wrapper implementation for Blazor.</Description>
+    <PackageId>KristofferStrube.Blazor.Konva</PackageId>
+    <PackageTags>Blazor;Wrapper;Konva;SVG;Layers</PackageTags>
+    <RepositoryUrl>https://github.com/KristofferStrube/Blazor.Konva</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageVersion>0.2.4</PackageVersion>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Kristoffer Strube</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\KristofferStrube.Blazor.konva.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

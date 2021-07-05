@@ -1,0 +1,37 @@
+﻿@page "/"
+@inject Konva Konva
+
+<div id="konva-div"></div>
+
+
+@code {
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var stage = await Konva.CreateStageAsync(
+                container: "konva-div",
+                width: 500,
+                height: 500
+            );
+
+            var layer = await Konva.CreateLayerAsync();
+
+            var circle = await Konva.CreateCircleAsync(
+                x: await stage.WidthAsync() / 2.0,
+                y: await stage.HeightAsync() / 2.0,
+                radius: 70,
+                fill: "red",
+                stroke: "black",
+                strokeWidth: 4
+            );
+
+            await layer.AddAsync(circle);
+
+            await stage.AddAsync(layer);
+
+            await layer.Draw();
+        }
+    }
+}
