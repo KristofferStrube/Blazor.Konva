@@ -2,7 +2,7 @@
 
 # Introduction
 A Blazor wrapper for the JavaScript library Konva.js
-
+**This is not a full wrapper but a sample of how to get started wrapping a library.**
 # Demo
 
 The sample project can be demoed at [https://kristofferstrube.github.io/Blazor.Konva/](https://kristofferstrube.github.io/Blazor.Konva/)
